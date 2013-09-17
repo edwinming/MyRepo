@@ -1,0 +1,71 @@
+{
+ "metadata": {
+  "name": "EdwinNewWorkbook"
+ },
+ "nbformat": 3,
+ "nbformat_minor": 0,
+ "worksheets": [
+  {
+   "cells": [
+    {
+     "cell_type": "code",
+     "collapsed": false,
+     "input": "import pandas",
+     "language": "python",
+     "metadata": {},
+     "outputs": [],
+     "prompt_number": 4
+    },
+    {
+     "cell_type": "code",
+     "collapsed": false,
+     "input": "tbdata = pandas.read_csv('https://dl.dropboxusercontent.com/u/92476571/TB_burden_countries_2013-09-10.csv')",
+     "language": "python",
+     "metadata": {},
+     "outputs": [],
+     "prompt_number": 5
+    },
+    {
+     "cell_type": "code",
+     "collapsed": false,
+     "input": "tbdata",
+     "language": "python",
+     "metadata": {},
+     "outputs": [
+      {
+       "html": "<pre>\n&ltclass 'pandas.core.frame.DataFrame'&gt\nInt64Index: 4686 entries, 0 to 4685\nData columns (total 39 columns):\ncountry                     4686  non-null values\niso2                        4664  non-null values\niso3                        4686  non-null values\niso_numeric                 4686  non-null values\ng_whoregion                 4686  non-null values\nyear                        4686  non-null values\ne_pop_num                   4686  non-null values\ne_prev_100k                 4676  non-null values\ne_prev_100k_lo              4676  non-null values\ne_prev_100k_hi              4676  non-null values\ne_prev_num                  4676  non-null values\ne_prev_num_lo               4676  non-null values\ne_prev_num_hi               4676  non-null values\ne_mort_exc_tbhiv_100k       4622  non-null values\ne_mort_exc_tbhiv_100k_lo    4622  non-null values\ne_mort_exc_tbhiv_100k_hi    4622  non-null values\ne_mort_exc_tbhiv_num        4622  non-null values\ne_mort_exc_tbhiv_num_lo     4622  non-null values\ne_mort_exc_tbhiv_num_hi     4622  non-null values\nsource_mort                 4686  non-null values\ne_inc_100k                  4676  non-null values\ne_inc_100k_lo               4676  non-null values\ne_inc_100k_hi               4676  non-null values\ne_inc_num                   4676  non-null values\ne_inc_num_lo                4676  non-null values\ne_inc_num_hi                4676  non-null values\ne_tbhiv_prct                3447  non-null values\ne_tbhiv_prct_lo             3446  non-null values\ne_tbhiv_prct_hi             3446  non-null values\ne_inc_tbhiv_100k            3446  non-null values\ne_inc_tbhiv_100k_lo         3446  non-null values\ne_inc_tbhiv_100k_hi         3446  non-null values\ne_inc_tbhiv_num             3446  non-null values\ne_inc_tbhiv_num_lo          3446  non-null values\ne_inc_tbhiv_num_hi          3446  non-null values\nsource_tbhiv                4686  non-null values\nc_cdr                       4331  non-null values\nc_cdr_lo                    4331  non-null values\nc_cdr_hi                    4331  non-null values\ndtypes: float64(30), int64(3), object(6)\n</pre>",
+       "output_type": "pyout",
+       "prompt_number": 6,
+       "text": "<class 'pandas.core.frame.DataFrame'>\nInt64Index: 4686 entries, 0 to 4685\nData columns (total 39 columns):\ncountry                     4686  non-null values\niso2                        4664  non-null values\niso3                        4686  non-null values\niso_numeric                 4686  non-null values\ng_whoregion                 4686  non-null values\nyear                        4686  non-null values\ne_pop_num                   4686  non-null values\ne_prev_100k                 4676  non-null values\ne_prev_100k_lo              4676  non-null values\ne_prev_100k_hi              4676  non-null values\ne_prev_num                  4676  non-null values\ne_prev_num_lo               4676  non-null values\ne_prev_num_hi               4676  non-null values\ne_mort_exc_tbhiv_100k       4622  non-null values\ne_mort_exc_tbhiv_100k_lo    4622  non-null values\ne_mort_exc_tbhiv_100k_hi    4622  non-null values\ne_mort_exc_tbhiv_num        4622  non-null values\ne_mort_exc_tbhiv_num_lo     4622  non-null values\ne_mort_exc_tbhiv_num_hi     4622  non-null values\nsource_mort                 4686  non-null values\ne_inc_100k                  4676  non-null values\ne_inc_100k_lo               4676  non-null values\ne_inc_100k_hi               4676  non-null values\ne_inc_num                   4676  non-null values\ne_inc_num_lo                4676  non-null values\ne_inc_num_hi                4676  non-null values\ne_tbhiv_prct                3447  non-null values\ne_tbhiv_prct_lo             3446  non-null values\ne_tbhiv_prct_hi             3446  non-null values\ne_inc_tbhiv_100k            3446  non-null values\ne_inc_tbhiv_100k_lo         3446  non-null values\ne_inc_tbhiv_100k_hi         3446  non-null values\ne_inc_tbhiv_num             3446  non-null values\ne_inc_tbhiv_num_lo          3446  non-null values\ne_inc_tbhiv_num_hi          3446  non-null values\nsource_tbhiv                4686  non-null values\nc_cdr                       4331  non-null values\nc_cdr_lo                    4331  non-null values\nc_cdr_hi                    4331  non-null values\ndtypes: float64(30), int64(3), object(6)"
+      }
+     ],
+     "prompt_number": 6
+    },
+    {
+     "cell_type": "code",
+     "collapsed": false,
+     "input": "tbdata[\"country\"].head()",
+     "language": "python",
+     "metadata": {},
+     "outputs": [
+      {
+       "output_type": "pyout",
+       "prompt_number": 7,
+       "text": "0    Afghanistan\n1    Afghanistan\n2    Afghanistan\n3    Afghanistan\n4    Afghanistan\nName: country, dtype: object"
+      }
+     ],
+     "prompt_number": 7
+    },
+    {
+     "cell_type": "code",
+     "collapsed": false,
+     "input": "",
+     "language": "python",
+     "metadata": {},
+     "outputs": []
+    }
+   ],
+   "metadata": {}
+  }
+ ]
+}
